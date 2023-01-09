@@ -1,0 +1,167 @@
+﻿@model List<Bikes.Model.Bikes>
+@{
+    ViewData["Title"] = "Current Bikes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btnDetails {
+        border:none;
+    }
+</style>
+<main id="content" role="main" class="main">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-end">
+                <div class="col-sm mb-2 mb-sm-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-no-gutter">
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Dev Bros Bikes</a></li>
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Overview</a></li>
+                        </ol>
+                    </nav>
+
+                    <h1 class="page-header-title">Current Bikes</h1>
+                </div>
+            </div>
+            <!-- End Row -->
+        </div>
+        <div class="card">
+            <!-- Header -->
+            <div class="card-header">
+                <div class="row justify-content-between align-items-center flex-grow-1">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
+                        <form>
+                            <!-- Search -->
+                            <div class="input-group input-group-merge input-group-flush">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="tio-search"></i>
+                                    </div>
+                                </div>
+                                <input id="datatableSearch" type="search" class="form-control" placeholder="Search bikes" aria-label="Search bikes">
+                            </div>
+                            <!-- End Search -->
+                        </form>
+                    </div>
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Header -->
+            <!-- Table -->
+            <div class="table-responsive datatable-custom">
+                <div id="datatable_wrapper" class="dataTables_wrapper no-footer">
+                    <table id="datatable" class="table table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table dataTable no-footer" style="width: 100%;" data-hs-datatables-options='{
+             "order": [],
+             "columnDefs": [ {
+                   "targets": 6,
+                   "orderable": false
+              } ],
+             "info": {
+               "totalQty": "#datatableEntriesInfoTotalQty"
+             },
+             "search": "#datatableSearch",
+             "entries": "#datatableEntries",
+             "isResponsive": false,
+             "isShowPaging": false,
+             "pagination": "datatableEntriesPagination"
+                   }'>
+                        <thead class="thead-light">
+                            <tr role="row">
+                                <th>Make</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                                <th>Displacement</th>
+                                <th>Price</th>
+                                <th>Terrain</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @if (Model == null)
+                            {
+                                <tr class="">
+                                    <td>
+                                        No Data Available
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var item in Model)
+                                {
+
+                        <tr class="">
+                            <td>
+                                @item.Make
+                            </td>
+                            <td>
+                                @item.Model
+                            </td>
+                            <td>
+                                @item.Year
+                            </td>
+                            <td>
+                                @item.Displacement
+                            </td>
+                            <td>
+                                @item.Price
+                            </td>
+                            <td>
+                                @item.Terrain
+                            </td>
+                            <td class="align-middle">
+                                <a id="btnDetails" href="@Url.Action("Bikedetail", new { item.BikeID })">
+                                    <img src="/front-dashboard-v1.1/dist/assets/img/logo/checkout.png" alt="buttonpng" border="0" />
+                                </a>
+                            </td>
+                        </tr>
+                                    }
+                                }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- End Table -->
+            <!-- Footer -->
+            <div class="card-footer">
+                <!-- Pagination -->
+                <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
+                    <div class="col-sm mb-2 mb-sm-0">
+                        <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
+                            <span class="mr-2">Showing:</span>
+
+                            <!-- Select -->
+                            <select id="datatableEntries" class="js-select2-custom"
+                                    data-hs-select2-options='{
+                    "minimumResultsForSearch": "Infinity",
+                    "customClass": "custom-select custom-select-sm custom-select-borderless",
+                    "dropdownAutoWidth": true,
+                    "width": true
+                  }'>
+                                <option value="3">3</option>
+                                <option value="6" selected>6</option>
+                                <option value="9">9</option>
+                            </select>
+                            <!-- End Select -->
+
+                            <span class="text-secondary mr-2">of</span>
+
+                            <!-- Pagination Quantity -->
+                            <span id="datatableEntriesInfoTotalQty"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-auto">
+                        <div class="d-flex justify-content-center justify-content-sm-end">
+                            <!-- Pagination -->
+                            <nav id="datatableEntriesPagination" aria-label="Activity pagination"></nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pagination -->
+            </div>
+            <!-- End Footer -->
+        </div>
+    </div>
+</main>

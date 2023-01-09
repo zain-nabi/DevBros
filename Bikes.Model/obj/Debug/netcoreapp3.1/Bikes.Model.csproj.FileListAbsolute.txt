@@ -1,0 +1,9 @@
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\bin\Debug\netcoreapp3.1\Bikes.Model.deps.json
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\bin\Debug\netcoreapp3.1\Bikes.Model.dll
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\bin\Debug\netcoreapp3.1\Bikes.Model.pdb
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\obj\Debug\netcoreapp3.1\Bikes.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\obj\Debug\netcoreapp3.1\Bikes.Model.AssemblyInfoInputs.cache
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\obj\Debug\netcoreapp3.1\Bikes.Model.AssemblyInfo.cs
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\obj\Debug\netcoreapp3.1\Bikes.Model.csproj.CoreCompileInputs.cache
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\obj\Debug\netcoreapp3.1\Bikes.Model.dll
+C:\Users\zaino\source\repos\DevBros\DevBrosBikers\Bikes.Model\obj\Debug\netcoreapp3.1\Bikes.Model.pdb

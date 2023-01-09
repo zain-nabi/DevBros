@@ -1,0 +1,70 @@
+﻿@model Bikes.Model.Bikes
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="main">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-end">
+                <div class="col-sm mb-2 mb-sm-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-no-gutter">
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Devbros Bikes</a></li>
+                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Overview</a></li>
+                        </ol>
+                    </nav>
+
+                    <h1 class="page-header-title">Bike Details</h1>
+                </div>
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Breadcrumb Section -->
+        <!-- Content Section -->
+        <div class="w-100 pt-10 pt-lg-7 pb-7">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Make</label>
+                        @Html.TextBoxFor(model => model.Make, new { @class = "form-control form-control-lg", @id = "txtMake", @readonly = "readonly" })
+                    </div>
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Model</label>
+                        @Html.TextBoxFor(model => model.Model, new { @class = "form-control form-control-lg", @id = "txtModel", @readonly = "readonly" })
+                    </div>
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Year</label>
+                        @Html.TextBoxFor(model => model.Year, new { @class = "form-control form-control-lg", @id = "txtYear", @readonly = "readonly" })
+
+                    </div>
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Displacement</label>
+
+                        @Html.TextBoxFor(model => model.Displacement, new { @class = "form-control form-control-lg", @id = "txtDisplacement", @readonly = "readonly" })
+                    </div>
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Price</label>
+                        @Html.TextBoxFor(model => model.Price, new { @class = "form-control form-control-lg", @id = "txtPrice", @readonly = "readonly" })
+                    </div>
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Terrain</label>
+                        @Html.TextBoxFor(model => model.Terrain, new { @id = "txtTerrain", @class = "form-control form-control-lg", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="js-form-message form-group">
+                        <label class="input-label" for="signupSrEmail">Description</label>
+                        @Html.TextAreaFor(model => model.Description, new { @id = "txtDescription", @class = "form-control form-control-lg", @readonly = "readonly", @cols = "10", @rows = "10" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content Section -->
+    </div>
+</main>
+<!-- ========== END MAIN ========== -->

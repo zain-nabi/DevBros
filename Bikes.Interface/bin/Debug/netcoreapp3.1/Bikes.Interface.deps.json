@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Bikes.Interface/1.0.0": {
+        "dependencies": {
+          "Bikes.Model": "1.0.0"
+        },
+        "runtime": {
+          "Bikes.Interface.dll": {}
+        }
+      },
+      "Bikes.Model/1.0.0": {
+        "runtime": {
+          "Bikes.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bikes.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bikes.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
